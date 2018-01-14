@@ -61,9 +61,13 @@ void heapSort(int n,int a[n])
 
 int main()
 {
-	int a[]={4,1,3,2,16,9,10,14,8,7};
-	heapSort(10,a);
-	for(int i=0;i<10;i++)
+	int n,i;
+	scanf("%d",&n);
+	int a[n];
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	heapSort(n,a);
+	for(i=0;i<n;i++)
 		printf("%d ",a[i]);
 	return 0;
 }
