@@ -10,13 +10,7 @@ def merge(A,p,q,r):
     i=0
     j=0
     k=p
-    print(p)
-    print(q)
-    print(r)
-    print(n1)
-    print(n2)
-    print(L)
-    print(R)
+
 
     while i<n1 and j<n2:
         if L[i] <= R[j]:
@@ -38,12 +32,12 @@ def merge(A,p,q,r):
 def mergeSort(A,p,r):
     if p<r:
         q=int((p+r)/2)
-        mergeSort(A,p,q)
         mergeSort(A,q+1,r)
+        mergeSort(A,p,q)
         merge(A,p,q,r)
 
 
-n = int(input("Enter array size : "))
+n = int(input("Enter length of the array : "))
 arr = []
 print("Enter array : ")
 for i in range(n):
